@@ -1,0 +1,180 @@
+/* ---------- Reset & base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  line-height: 1.6;
+  color: #1f2933;
+  background: #eef1f5;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.25;
+  margin-top: 0;
+}
+
+/* ---------- Header & navigation ---------- */
+header {
+  background: #1e3a5f;
+  color: #ffffff;
+  padding: 24px 16px;
+  font-size: 1.25rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav a:hover,
+.nav a:focus-visible {
+  background: #ffffff;
+  color: #1e3a5f;
+}
+
+/* ---------- Main content & section cards ---------- */
+.main-content {
+  max-width: 800px;
+  margin: 32px auto;
+  padding: 0 16px;
+}
+
+.main-content section {
+  background: #ffffff;
+  padding: 24px;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- Features: responsive grid of cards ---------- */
+.features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+.features li {
+  background: #f3f6fa;
+  border: 1px solid #d5dde8;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+/* ---------- Shortcuts table ---------- */
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border: 1px solid #c8d1dc;
+  padding: 10px 14px;
+  text-align: left;
+}
+
+.table thead th {
+  background: #1e3a5f;
+  color: #ffffff;
+}
+
+.table tbody tr:nth-child(even) {
+  background: #f3f6fa;
+}
+
+/* ---------- Feedback form ---------- */
+form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+form input,
+form textarea {
+  display: block;
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  font: inherit;
+  border: 1px solid #b7c2d0;
+  border-radius: 6px;
+}
+
+form input:focus,
+form textarea:focus {
+  outline: 2px solid #3b7dd8;
+  outline-offset: 1px;
+  border-color: #3b7dd8;
+}
+
+form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* ---------- Buttons ---------- */
+button {
+  font: inherit;
+  padding: 10px 20px;
+  color: #ffffff;
+  background: #1e3a5f;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background: #3b7dd8;
+  transform: translateY(-1px);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 24px 16px;
+  color: #52606d;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 600px) {
+  header {
+    font-size: 1rem;
+    padding: 12px 8px;
+  }
+
+  .main-content {
+    margin: 16px auto;
+  }
+
+  .main-content section {
+    padding: 16px;
+  }
+}
